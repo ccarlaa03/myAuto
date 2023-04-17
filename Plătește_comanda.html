@@ -1,0 +1,181 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My AuTo</title>
+    <link rel="icon" type="images/icon"
+        href="https://previews.123rf.com/images/tatianasun/tatianasun1705/tatianasun170500025/77826881-auto-mechanic-car-service-repair-and-maintenance-work-icons-set-isolated-vector-illustration.jpg" />
+    <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style type="text/css">
+        @media screen and (max-width: 39.9375em) {}
+
+        @media screen and (min-width: 40em) {}
+
+        @media screen and (min-width: 40em) and (max-width: 63.9375em) {}
+
+        @media screen and (min-width: 64em) {}
+
+        @media screen and (min-width: 64em) and (max-width: 74.9375em) {}
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        form {
+            border: 3px solid #f1f1f1;
+        }
+
+        .top-bar {
+            padding: 8px;
+            width: 100vw;
+        }
+
+        .cardForm-Field50 {
+            float: left;
+            width: 50%;
+        }
+
+        .card-container form {
+            max-width: 350px;
+            text-align: center;
+        }
+
+        .form-container form {
+            margin: 10px auto;
+        }
+
+        .form-container input {
+            margin: 0 0 10px 0;
+        
+            font-size: 16px;
+            float: left;
+            padding: 5px 0;
+            box-sizing: border-box;
+            box-shadow: none;
+        
+            display: block;
+        }
+
+        input.secondRow {
+            float: left;
+            display: block;
+            width: 100%;
+        }
+
+        .form-container label {
+            text-align: left;
+            float: left;
+            padding: 5px 0 0px 5px;
+            width: 100%;
+            font-family: arial;
+            text-transform: uppercase;
+            font-size: 14px;
+      
+        }
+
+        input.button {
+            width: 100%;
+            padding: 11px;
+            border: none;
+            box-shadow: none;
+            border-radius: 0;
+            
+        }
+
+        .form-container input[name="name"] {
+            width: 100%;
+        }
+
+        .form-container input[name="number"] {
+            width: 100%;
+        }
+
+        .form-container input[name="cvc"] {
+            border-left: 0px;
+        }
+
+        .CardDefault,
+        .CardDefault:hover {
+            background: gray;
+            color: #fff;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .CardWarning,
+        .CardWarning:hover {
+            background: firebrick;
+            color: #fff;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .CardGood,
+        .CardGood:hover {
+            background: firebrick;
+            color: #fff;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .form-container input.incorrectInfo {
+            border: firebrick solid 1px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="top-bar">
+        <div class="top-bar-left">
+            <ul class="menu">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="Mașina_mea.html">Mașina mea</a></li>
+                <li><a href="Piese_auto.html">Piese Auto</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="top-bar-right">
+            <ul class="menu">
+                <a href="Contul_meu.html">Contul meu</a>
+            </ul>
+        </div>
+    </div>
+    <div class="card-container">
+        <div class="card-wrapper"></div>
+
+        <div class="form-container">
+            <form action="">
+                <label for="number">Numărul de card </label><br>
+                <input placeholder="XXXX  XXXX  XXXX  XXXX" type="text" name="number">
+                <label for="name">Namele deținătorului</label>
+                <input placeholder="Full Name" type="text" name="name"><br>
+                <div class="cardForm-Field50">
+                    <label for="expiry">Data de expirare </label>
+                    <rb>
+                        <input placeholder="MM/YY" type="text" name="expiry" class="secondRow">
+                </div>
+                <div class="cardForm-Field50">
+                    <label for="cvc">Codul de securitate</label><br>
+                    <input placeholder="XXX" type="text" name="cvc" class="secondRow incorrectInfo">
+                </div>
+                <br>
+            
+
+                <input type="submit" value="Plătește" class="button CardGood">
+
+
+            </form>
+        </div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+    <script>
+        $(document).foundation();
+    </script>
+</body>
+
+</html>
