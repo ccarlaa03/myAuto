@@ -1,0 +1,10 @@
+@media (max-width:801px){
+    .top-bar{
+        margin-top: 30px;
+        display:flex;
+    }
+
+    .header img{
+        display: none;
+    }
+}
