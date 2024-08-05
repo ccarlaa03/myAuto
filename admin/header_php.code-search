@@ -1,0 +1,117 @@
+# Query: header.php
+# Flags: CaseSensitive
+# Including: .php
+# ContextLines: 1
+
+22 results - 22 files
+
+adauga_furnizor.php:
+  78      session_start();
+  79:         include('headerlogged.php');
+
+  80      if (isset($_SESSION['rol']) && $_SESSION['rol'] == 'Mecanic') {
+
+adauga_util.php:
+  89    session_start();
+  90:   include('header.php');
+  91    if (isset($_SESSION['rol']) && $_SESSION['rol'] == 'admin') {
+
+admin_crud_adauga.php:
+  96  session_start();
+  97: include('header.php');
+  98  if (isset($_SESSION['rol']) && $_SESSION['rol'] == 'admin') {
+
+admin_crud_editare.php:
+  50    session_start();
+  51:   include('header.php');
+  52    if (isset($_SESSION['rol']) && $_SESSION['rol'] == 'admin') {
+
+cauta_ist.php:
+  56          session_start();
+  57:         include('header.php');
+  58  
+
+Cont_admin.php:
+  64  
+  65:     include('header.php');
+  66      include('permisiuni_admin.php');
+
+Cont_mecanic.php:
+  59  
+  60:     include('header.php');
+  61      include('headerlogged.php');
+
+Cont_nou.php:
+  85  <?php 
+  86: include('header.php');
+  87  
+
+edit_cont.php:
+  56      session_start();
+  57:     include('header.php');
+  58      if (isset($_SESSION['rol']) && $_SESSION['rol'] == 'utilizator') {
+
+editare_furnizori.php:
+  49  session_start();
+  50: include('header.php');
+  51  if (isset($_SESSION['rol']) && $_SESSION['rol'] == 'Mecanic') {
+
+editare.util.php:
+  51    session_start();
+  52:   include('header.php');
+  53    if (isset($_SESSION['rol']) && $_SESSION['rol'] == 'admin') {
+
+furnizori.php:
+  46    session_start();
+  47:   include('header.php');
+  48    if (isset($_SESSION['rol']) && $_SESSION['rol'] == 'Mecanic') {
+
+Home.php:
+  227    <?php 
+  228:      include('header.php');
+  229       include('headerlogged.php');
+
+Istoric_mașini.php:
+  2  session_start();
+  3: include('header.php');
+  4  
+
+Lista_conturi_adm_ang.php:
+  78    session_start();
+  79:   include('header.php');
+  80    if (isset($_SESSION['rol']) && $_SESSION['rol'] == 'admin') {
+
+Lista_conturi_admn_util.php:
+  84    session_start();
+  85:   include('header.php');
+  86    if (isset($_SESSION['rol']) && $_SESSION['rol'] == 'admin') {
+
+Lista_sarcini_adm.php:
+  119    session_start();
+  120:   include('header.php');
+  121    if (isset($_SESSION['rol']) && $_SESSION['rol'] == 'admin') {
+
+Mașina_mea.php:
+  35      session_start();
+  36:     include('header.php');
+  37  
+
+Mecanici.php:
+  119      session_start();
+  120:     include('header.php');
+  121      echo ('<h2 style="color: firebrick;" align="center">Listă de sarcini</h2>');
+
+permisiuni_util.php:
+  10  // Includeți antetul meniului
+  11: include 'header.php';
+  12  
+
+Sarcini.php:
+  92  session_start();
+  93: include('header.php');
+  94  
+
+vizualizare_recenzie.php:
+  72      session_start();
+  73:     include('header.php');
+  74  

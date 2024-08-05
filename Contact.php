@@ -1,6 +1,11 @@
+
 <!doctype html>
 <html class="no-js" lang="en" dir="ltr">
+<?php
+    session_start();
+    include('headerlogged.php');
 
+    ?>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -9,7 +14,10 @@
     <link rel="stylesheet" href="css/foundation.css">
     <link rel="icon" type="images/icon"
         href="https://previews.123rf.com/images/tatianasun/tatianasun1705/tatianasun170500025/77826881-auto-mechanic-car-service-repair-and-maintenance-work-icons-set-isolated-vector-illustration.jpg" />
+    <link rel="stylesheet" href="./css/global.css">
+
 </head>
+
 <style>
     @media screen and (max-width: 39.9375em) {}
 
@@ -33,11 +41,6 @@
         top: 10px;
         left: 10px;
         color: firebrick;
-    }
-
-    .top-bar {
-        padding: 8px;
-        width: 100vw;
     }
 
     input:focus,
@@ -226,223 +229,11 @@
         font-size: 17px;
         margin-bottom: 30px;
     }
-
-    .footer {
-        background-color: #333333;
-        padding: 30px 0 45px;
-        margin-top: 2%;
-        overflow: hidden;
-        width: 1365px
-    }
-
-    .container2 {
-        width: 1005px;
-        margin: auto;
-        overflow: hidden;
-    }
-
-    .footer .contact {
-        width: 34%;
-        overflow: hidden;
-        float: left;
-    }
-
-    .footer .contact p {
-        color: #888;
-        font-size: 12px;
-        margin-bottom: 10px;
-    }
-
-    .footer .contact .data {
-        width: 43%;
-        float: left;
-        margin-right: 18px;
-    }
-
-    .footer .contact .data h3 {
-        font-size: 10px;
-        color: #888;
-        margin-bottom: 3px;
-        margin-top: 20px;
-    }
-
-    .footer .contact .data span {
-        color: #e2e2e2;
-        font-size: 10px;
-    }
-
-    .footer .info {
-        width: 15%;
-        float: left;
-        margin-right: 40px;
-    }
-
-    .footer .info ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    .footer .info ul li {
-        color: #888;
-        margin-top: 10px;
-        font-size: 13px;
-    }
-
-    .footer .account {
-        width: 15%;
-        float: left;
-        margin-right: 20px;
-    }
-
-    .footer .account ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    .footer .account ul li {
-        color: #888;
-        margin-top: 10px;
-        font-size: 13px;
-    }
-
-    .footer .newsletter {
-        float: left;
-        width: 30%;
-    }
-
-    .footer .newsletter p {
-        color: #888;
-        font-size: 11px;
-        line-height: 1.6;
-    }
-
-    .footer .newsletter input[type="email"] {
-        background-color: #4C4C4C;
-        border: 0;
-        padding: 7px 8px;
-        outline: 0;
-        border-radius: 2px;
-        margin-bottom: 15px;
-    }
-
-    .footer .newsletter ::placeholder {
-        color: #999;
-    }
-
-    .footer .newsletter button {
-        background-color: #E52727;
-        border: 0;
-        color: #FFF;
-        padding: 8px 18px;
-        font-size: 11px;
-        border-radius: 2px;
-    }
-
-    .footer .newsletter span {
-        color: #888;
-        font-size: 11px;
-    }
-
-    .footer .newsletter .icons {
-        margin-top: 8px;
-    }
-
-    .footer .newsletter .icons i {
-        color: #FFF;
-        width: 28px;
-        height: 28px;
-        line-height: 28px;
-        text-align: center;
-        border-radius: 50%;
-        margin-right: 2px;
-        cursor: pointer;
-    }
-
-    .footer .newsletter .icons i:first-of-type {
-        background-color: #3C5A99
-    }
-
-    .footer .newsletter .icons i:nth-of-type(2) {
-        background-color: #00A1E7
-    }
-
-    .footer .newsletter .icons i:nth-of-type(3) {
-        background-color: #E32E2E
-    }
-
-    .footer .newsletter .icons i:nth-of-type(4) {
-        background-color: #815DC7
-    }
-
-    .footer .newsletter .icons i:nth-of-type(5) {
-        background-color: #FFC338;
-        color: #333;
-    }
-
-    .footer .newsletter .icons i:hover {
-        color: #000;
-        background-color: #FFF;
-    }
-
-    .copyright {
-        background-color: #2B2B2B;
-        padding: 20px 0 10px;
-        overflow: hidden;
-        width: 1365px
-    }
-
-    .copyright .powered {
-        color: #888;
-        font-size: 11px;
-        float: left;
-    }
-
-    .copyright .powered span {
-        color: #E2E2E2;
-    }
-
-    .copyright .company {
-        float: right;
-    }
-
-    .copyright .company img {
-        width: 35px
-    }
 </style>
-</head>
-
 <body>
+
     <div class="header">
         <h1><img src="https://i.pinimg.com/736x/98/8d/20/988d2004483746981f41f4db8444e59a.jpg" alt="logo" />My AuTo</h1>
-    </div>
-
-    <div class="top-bar">
-        <div class="top-bar-left">
-            <ul class="dropdown menu" data-dropdown-menu>
-                <li class="is-active"><a href="Home.html">Home</a></li>
-                <li>
-                    <a href="Service_auto.html">Service Auto</a>
-                    <ul class="menu vertical">
-                        <li><a href="Despre noi.html">Despre noi</a></li>
-                        <li><a href="Cautăți_mecanic.html">Cautăți mecanic</a></li>
-                        <li><a href="Mașina_mea.html">Mașina mea</a></li>
-                    </ul>
-                </li>
-                <li><a href="Contact.html">Contact</a></li>
-            </ul>
-        </div>
-        <div class="top-bar-right">
-            <ul class="dropdown menu" data-dropdown-menu>
-                <li><a href="Contul_meu.html">Contul meu</a>
-                    <ul class="menu vertical">
-                        <li><a href="Login.html">Log in</a></li>
-                        <li><a href="Cont_nou.html">Cont nou</a></li>
-                </li>
-            </ul>
-            </ul>
-        </div>
     </div>
     <div class="container">
         <div class="innerwrap">
@@ -504,69 +295,9 @@
 
         </div>
     </div>
-    <div class="footer">
-        <div class="container2">
-            <div class="top">
-                <div class="contact">
-                    <h2>Contactează-ne</h2>
-                    <p>Puteți lua legătura cu noi prin:</p>
-                    <div class="data">
-                        <h3>Număr de telefon:</h3>
-                        <span>0749 889 999</span>
-                    </div>
-                    <div class="data">
-                        <h3>Adresa de email:</h3>
-                        <span>my.auto@gmail.com</span>
-                    </div>
-                    <div class="data">
-                        <h3>Locație:</h3>
-                        <span>Seini, jud. Maramureș, România</span>
-                    </div>
-                    <div class="data">
-                        <h3>Program:</h3>
-                        <span> Luni-Vinei 09:00 - 18:00</span>
-                    </div>
-                </div>
-                <div class="info">
-                    <h2>Informații</h2>
-                    <ul>
-                        <li>Despre noi</li>
-                        <li>Informații despre livrare</li>
-                        <li>Contact</li>
-                        <li>Informații retur</li>
-                        <li>Întrebări frecvente</li>
-                    </ul>
-                </div>
-                <div class="account">
-                    <h2>Contul meu</h2>
-                    <ul>
-                        <li>Comenzi</li>
-                        <li>Retururi</li>
-                        <li>Lista de cumpărături</li>
-                        <li>Adrese</li>
-                        <li>Voucher</li>
-                    </ul>
-                </div>
-                <div class="newsletter">
-                    <h2>Aboneaza-te la newsletterul nostru</h2>
-                    <input type="email" placeholder="nume@example.com">
-                    <button>Trimite</button>
-                </div>
-            </div>
 
-        </div>
-    </div>
-    <div class="copyright">
-        <div class="container2">
-            <div class="company">
-                <img src="https://i.postimg.cc/XvTfx0NK/paypal.png">
-                <img src="https://i.postimg.cc/DZLqMYm9/visa.png">
-                <img src="https://i.postimg.cc/K88D8NsT/american.png">
-                <img src="https://i.postimg.cc/jjW6zjTd/master.png">
-                <img src="https://i.postimg.cc/FHCgdL2B/maestro.png">
-            </div>
-        </div>
-    </div>
+    <?php include 'footer.php'; ?>
+
     <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/what-input.js"></script>
     <script src="js/vendor/foundation.js"></script>

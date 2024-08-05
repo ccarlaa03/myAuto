@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/foundation.css">
     <link rel="icon" type="images/icon"
         href="https://previews.123rf.com/images/tatianasun/tatianasun1705/tatianasun170500025/77826881-auto-mechanic-car-service-repair-and-maintenance-work-icons-set-isolated-vector-illustration.jpg" />
+    <link rel="stylesheet" href="./css/global.css">
 </head>
 <style>
     @media screen and (max-width: 39.9375em) {}
@@ -35,10 +36,7 @@
         width: 100vw;
     }
 
-    .top-bar {
-        padding: 8px;
-        width: 100vw;
-    }
+
 
     input[type=text],
     input[type=password],
@@ -83,54 +81,58 @@
     }
 </style>
 </head>
+<?php
+include('headerlogged.php');
+
+$mysqli = new mysqli('localhost:3307', 'root', '', 'my_auto') or die(mysqli_error($mysqli));
+$nume = "";
+echo (isset($_POST['nume']) && isset($_POST['parola']) && isset($_POST['email']) && isset($_POST['adresa']) && isset($_POST['telefon']) && isset($_POST['psw-repeat']) && isset($_POST['nr_inmatriculare']));
+if (isset($_POST['nume']) && isset($_POST['parola']) && isset($_POST['email']) && isset($_POST['adresa']) && isset($_POST['telefon']) && isset($_POST['psw-repeat']) && isset($_POST['nr_inmatriculare'])) {
+    $nume = $_POST['nume'];
+    $rol = "utilizator";
+    $parola = $_POST['parola'];
+    $email = $_POST['email'];
+    $adresa = $_POST['adresa'];
+    $telefon = $_POST['telefon'];
+    $conf_parola = $_POST['psw-repeat'];
+    $nr_inmatriculare = $_POST['nr_inmatriculare'];
+    $data_inregistrari = date("Y-m-d H:i:s");
+    $mysqli->query("INSERT INTO urilizatori (nume, rol, email,  parola, adresa, telefon, data_inregistrare, nr_inmatriculare) VALUES ('$nume','$rol','$email','$parola','$adresa', '$telefon', '$data_inregistrari', 'nr_inmatriculare')") or die($mysqli->error);
+    $_POST = array();
+}
+?>
 
 <body>
-    <div class="top-bar">
-        <div class="top-bar-left">
-            <ul class="menu">
-                <li><a href="home.html">Home</a></li>
-                <li><a href="Mașina_mea.html">Mașina mea</a></li>
-                <li><a href="Contact.html">Contact</a></li>
-            </ul>
-        </div>
-        <div class="top-bar-right">
-            <ul class="menu">
-                <a href="Contul_meu.html">Contul meu</a>
-            </ul>
-        </div>
-    </div>
 
-    <form>
+    <form action="Cont_nou.php" method="POST">
         <div class="container">
             <center>
                 <h1> Creează cont nou</h1>
                 <hr>
                 <label><b> Nume: </b></label>
-                <input type="text" name="firstname" size="15" required />
-                <label> <b>Prenume:</b> </label>
-                <input type="text" name="middlename" size="15" required />
-                <label>
-                    <b>Formă de adresare:</b>
-                </label><br>
-                <input type="radio" value="Male" name="gender" checked> Domnul
-                <input type="radio" value="Female" name="gender"> Doamna<br />
+                <input type="text" name="nume" size="15" required />
                 <label> <br>
                     <b>Număr de telefon: </b>
                 </label>
-                <input type="text" name="country code" placeholder="Country Code" value="07" size="2" />
-                <b>Adresa: </b>
-                <textarea cols="5" rows="5" value="address" required>
-                 </textarea>
+                <input type="text" name="telefon" placeholder="Country Code" value="07" size="2" />
+                <label><b>Adresa: </b></label><br>
+                <input type="text" name="adresa" for="adresa" required
+                    placeholder="Cod poștal, oraș, stradă și număr. " />
+
                 <label for="email"><b>Email:</b></label>
                 <input type="text" name="email" required>
-                <label for="psw"><b>Parolă:</b></label>
-                <input type="password" name="psw" required>
+                <label for="nr_inmatriculare"><b>Numărul de înmatriculare a mașinii:</b></label>
+                <input type="text" name="nr_inmatriculare" required>
+                <label for="parola"><b>Parolă:</b></label>
+                <input type="password" name="parola" required>
 
                 <label for="psw-repeat"><b>Confirmă parolă:</b></label>
                 <input type="password" name="psw-repeat" required>
                 <button type="submit" class="registerbtn">Inregistrare</button>
+            </center>
+        </div>
     </form>
-    </center>
+
 
     <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/what-input.js"></script>
